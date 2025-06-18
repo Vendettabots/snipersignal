@@ -7,7 +7,7 @@ import React, { useState } from "react";
 function AboutSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState("landing");
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState<any[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   return (
