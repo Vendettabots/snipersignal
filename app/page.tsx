@@ -106,15 +106,15 @@ export default function ECommerceApp() {
     });
   };
 
-  // Update quantity function
-  const updateQuantity = (id, newQuantity) => {
-    if (newQuantity < 1) return;
-    setCart(prevCart =>
-      prevCart.map(item =>
-        item.id === id ? { ...item, quantity: newQuantity } : item
-      )
-    );
-  };
+ const updateQuantity = (id: string, newQuantity: number) => {
+  if (newQuantity < 1) return;
+  setCart(prevCart =>
+    prevCart.map(item =>
+      item.id === id ? { ...item, quantity: newQuantity } : item
+    )
+  );
+};
+
 
   // Remove from cart function
   const removeFromCart = (id) => {
