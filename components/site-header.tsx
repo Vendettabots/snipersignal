@@ -4,10 +4,13 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
 interface HeaderProps {
-  setCurrentPage: (page: string) => void;
-  cart: Array<any>;
-  setIsCartOpen: (isOpen: boolean) => void;
+  setCurrentPage: React.Dispatch<React.SetStateAction<string>>;
+  cart: any[];
+  setCart: React.Dispatch<React.SetStateAction<any[]>>; // ✅ bunu ekle
+  isCartOpen: boolean;
+  setIsCartOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
+
 
 export default function Header({ setCurrentPage, cart, setIsCartOpen }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
