@@ -54,7 +54,7 @@ const products = [
 
 export default function ECommerceApp() {
   const [currentPage, setCurrentPage] = useState("landing");
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState<any[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [hoveredFeature, setHoveredFeature] = useState(null);
   const [hasHydrated, setHasHydrated] = useState(false);
