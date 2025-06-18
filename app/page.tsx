@@ -117,7 +117,7 @@ export default function ECommerceApp() {
 
 
   // Remove from cart function
-  const removeFromCart = (id) => {
+  const removeFromCart = (id: string) => {
     setCart(prevCart => prevCart.filter(item => item.id !== id));
   };
 
