@@ -92,7 +92,7 @@ export default function ECommerceApp() {
   const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
   // Add to cart function
-  const addToCart = (product) => {
+  const addToCart = (product: any) => {
     setCart(prevCart => {
       const existingItem = prevCart.find(item => item.id === product.id);
       if (existingItem) {
